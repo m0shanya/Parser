@@ -1,0 +1,9 @@
+.idea/
+
+__pycahe__/
+*.py[cod]
+*&py.class
+
+.pytest_cache/
+
+.env
