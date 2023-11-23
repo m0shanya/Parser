@@ -12,6 +12,12 @@ kafka-python = "*"
 redis = "*"
 black = "*"
 pytest = "*"
+aioredis = "*"
+python-dotenv = "*"
+motor = "*"
+fastapi-cache2 = "*"
+aiohttp = "*"
+pydantic-settings = "*"
 
 [dev-packages]
 
