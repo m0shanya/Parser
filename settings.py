@@ -32,6 +32,22 @@ class Setup(BaseSettings):
     old_price_from_card: str = "x-product-card-description__price-old"
     new_price_from_card: str = "x-product-card-description__price-new"
 
+    twitch_prefix: str = "/twitch"
+
+    twitch_database: str = "twitch"
+    streamers_collection: str = "streamers"
+    games_collection: str = "games"
+    streams_collection: str = "streams"
+
+    twitch_url: str = os.environ.get("TWITCH_URL")
+    games_url: str = os.environ.get("GAMES_URL")
+    streamers_url: str = os.environ.get("USERS_URL")
+    streams_url: str = os.environ.get("STREAMS_URL")
+    target_game_id: int = 511224
+
+    client_id: Any = os.environ.get("CLIENT_ID")
+    client_secret: Any = os.environ.get("CLIENT_SECRET")
+
 
 def get_config() -> Setup:
     """
