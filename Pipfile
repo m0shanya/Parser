@@ -18,6 +18,7 @@ motor = "*"
 fastapi-cache2 = "*"
 aiohttp = "*"
 pydantic-settings = "*"
+aiokafka = "*"
 
 [dev-packages]
 

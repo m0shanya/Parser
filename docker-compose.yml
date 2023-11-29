@@ -52,6 +52,7 @@ services:
     depends_on:
       - mongo
       - redis
+      - kafka
     volumes:
       - .:/home/Parser/parser
     restart: unless-stopped

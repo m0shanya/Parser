@@ -56,19 +56,21 @@ async def parse() -> dict:
 
 @lamoda_router.post('/coat/')
 @cache(expire=3600)
-async def get_coat(data=Body()) -> Response:
+async def get_coat(coat_data: Request) -> Response:
     """
     Get a single coat based on the request data.
     """
+    data = await coat_data.json()
     response = await get_response(many=False, request=data)
     return response
 
 
 @lamoda_router.post('/coats/')
 @cache(expire=3600)
-async def get_coats(data=Body()) -> Response:
+async def get_coats(coat_data: Request) -> Response:
     """
     Get multiple coats based on the request data.
     """
+    data = await coat_data.json()
     response = await get_response(many=True, request=data)
     return response

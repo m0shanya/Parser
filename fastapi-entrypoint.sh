@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sleep 5
+
 until cd /home/Parser/parser
 do
     echo "Waiting for server volume..."
