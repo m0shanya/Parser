@@ -19,6 +19,7 @@ fastapi-cache2 = "*"
 aiohttp = "*"
 pydantic-settings = "*"
 aiokafka = "*"
+pytest-asyncio = "*"
 
 [dev-packages]
 
