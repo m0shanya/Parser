@@ -90,7 +90,7 @@ class Saver(MongoClient):
         streamer = await cls(collection=setup.streamers_collection).collection.find_one(
             {"login": login}
         )
-        await validate_streamer(login=streamer.login)
+        await validate_streamer(login=streamer["login"])
         streamer.pop("_id", None)
         streamer["inserted_at"] = streamer["inserted_at"].isoformat()
         return streamer
